@@ -1,5 +1,5 @@
 def somar(a, b):
-    pass
+    print("implementando somar");
 def subtrair(a, b):
     pass
 
