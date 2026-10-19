@@ -4,8 +4,10 @@ def subtrair(a, b):
     pass
 
 def multiplicar(a, b):
-    pass
-
+    a == 1
+    b == 2
+    print(a*b)
+    
 def dividir(a, b):
     pass
 def eh_par(numero):
