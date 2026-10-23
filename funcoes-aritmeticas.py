@@ -4,9 +4,13 @@ def subtrair(a, b):
     pass
 
 def multiplicar(a, b):
-    a == 1
-    b == 2
-    print(a*b)
+   return a * b
+if __name__ == "__main__":
+    a = float(input("Informe o primeiro número: "))
+    b = float(input("Informe o segundo número: "))
+
+    resultado = multiplicar(a, b)
+    print(f"O resultado da multiplicação é: {resultado}")
     
 def dividir(a, b):
     pass
