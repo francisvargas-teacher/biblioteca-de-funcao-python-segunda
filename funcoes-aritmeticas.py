@@ -10,8 +10,13 @@ def dividir(a, b):
     pass
 def eh_par(numero):
     pass
+
 def calcular_media(numeros):
-    pass
+    #Ricardo Quadros#
+    if len(numeros) == 0:
+        raise ValueError("A lista não pode estar vazia")
+    return sum(numeros) / len(numeros)
+
 def maior_valor(numeros):
     pass
 
