@@ -1,36 +1,53 @@
-a = 0 
-b = 0
 def somar(a, b):
-    pass
+    return a + b
+
+
 def subtrair(a, b):
-    pass
+    return a - b
+
+
 def multiplicar(a, b):
-    pass
+    return a * b
+
+
 def dividir(a, b):
-        a = int(input("Digite o primeiro valor: "))
-        b = int(input("Digite o segundo valor: "))
-        resultado = a/b if b != 0 else 0 
-        try:
-         print(f"RESULTADO DE {a}/{b}: {a/b}")
-        except:
-            print(f"RESULTADO DE {a}/{b}: {resultado}")
-        return Menu_principal()
+    if b == 0:
+        return 0
+    return a / b
+
 
 def eh_par(numero):
-    pass
+    return numero % 2 == 0
+
+
 def calcular_media(numeros):
-    pass
+    if not numeros:
+        return 0
+    return sum(numeros) / len(numeros)
+
+
 def maior_valor(numeros):
-    pass
+    if not numeros:
+        return None
+    return max(numeros)
+
 
 def calcular_fatorial(numero):
-    pass
+    if numero < 0:
+        raise ValueError("Não existe fatorial de número negativo.")
+
+    fatorial = 1
+    for i in range(2, numero + 1):
+        fatorial *= i
+
+    return fatorial
+
 
 def gerar_tabuada(numero):
-    pass 
+    return [f"{numero} x {i} = {numero * i}" for i in range(1, 11)]
+
 
 def Menu_principal():
-
     while True:
         print("")
         print("")
@@ -46,18 +63,21 @@ def Menu_principal():
         print("")
         print(" CM = calcular media, S = Sair")
         print("")
-        opções = input(" Selecione as opções: ")
-         
-        if opções == "/":
-            dividir(a, b)
+        opcoes = input(" Selecione as opções: ")
 
-        elif opções == "S" and opções == "s":
+        if opcoes == "/":
+            a = float(input("Digite o primeiro valor: "))
+            b = float(input("Digite o segundo valor: "))
+            print(f"RESULTADO DE {a}/{b}: {dividir(a, b)}")
+
+        elif opcoes == "S" or opcoes == "s":
             print("")
             print("saindo do programa")
             print(".")
             print(".")
             print(".")
             break
+
 
 if __name__ == "__main__":
     Menu_principal()

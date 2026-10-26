@@ -1,5 +1,7 @@
 def remover_duplicados(lista):
-    pass
+    return list(dict.fromkeys(lista))
+
+
 def ordenar_lista(lista):
-    pass
+    return sorted(lista)
 
