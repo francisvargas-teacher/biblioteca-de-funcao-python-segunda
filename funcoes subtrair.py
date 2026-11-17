@@ -1,5 +1,13 @@
-print('Funcao subtrair: ')
-n1=(int(input('digite um numero')))
-n2=int(input('digite outro numero'))
-subtracao=n1-n2
-print('o resultado é {}'.format(subtracao))
+
+def subtrair(numero1, numero2):
+    return numero1 - numero2
+
+
+print("=== FUNÇÃO SUBTRAIR ===")
+
+numero1 = int(input("Digite o primeiro número: "))
+numero2 = int(input("Digite o segundo número: "))
+
+resultado = subtrair(numero1, numero2)
+
+print(f"Resultado: {numero1} - {numero2} = {resultado}")
