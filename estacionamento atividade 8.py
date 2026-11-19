@@ -59,7 +59,7 @@ while True:
     print('1 - Estacionar veiculo')
     print('2 - Retirar veiculo')
     print('3 - Consultar vagas')
-    print('4 - Mostrar estacionamento')
+    print('4 - Mostrar vagas de estacionamento')
     print('5 - Sair')
 
     opcao = input('Escolha uma opcao: ')
@@ -85,9 +85,20 @@ while True:
     elif opcao == '3':
         consultar_vagas(estacionamento)
 
+  
     elif opcao == '4':
-        for linha in estacionamento:
-            print(linha)
+        print('\n      MAPA DE VAGAS DO ESTACIONAMENTO')
+        print('         1  2  3  4  5')
+        for i in range(len(estacionamento)):
+            print('Fila', i + 1, end=': ')
+            for j in range(len(estacionamento[i])):
+                if estacionamento[i][j] == 0:
+                    print('L', end=' ')
+                else:
+                    print('X', end=' ')
+            print()
+        print('L = Livre | X = Ocupada')
+
 
     elif opcao == '5':
         print('Programa encerrado!')
